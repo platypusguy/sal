@@ -23,9 +23,10 @@ public class Main {
         System.out.println( "Number of processors: " + procs );
         
         Sal sal = new Sal();
+        sal.initialize();
         sal.addActor( new Stdout( "stdout" ));
-        sal.addActor( new Log( "log" ));
-        sal.addActor( new Shutdown( "monitor" ));
+//        sal.addActor( new Log( "log" ));
+//        sal.addActor( new Shutdown( "monitor" ));
 
         sal.send( new Message( "stdout", "SalTest v. 0.0.1" ));
 
